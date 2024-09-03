@@ -67,12 +67,12 @@ source=("git+https://git.savannah.gnu.org/git/grub.git#tag=grub-${_pkgver}?signe
 
 sha256sums=('SKIP'
             'SKIP'
-            '8ea5b5a14d71e3353d1fea373f5d88d198ad1e285cedd8294655926ee11fd91d'
+            'SKIP'
             'SKIP'
             '5dee6628c48eef79812bb9e86ee772068d85e7fcebbd2b2b8d1e19d24eda9dab'
             '8488aec30a93e8fe66c23ef8c23aefda39c38389530e9e73ba3fbcc8315d244d'
             'b5d9fcd62ffb3c3950fdeb7089ec2dc2294ac52e9861980ad90a437dedbd3d47'
-            '7df3f5cb5df7d2dfb17f4c9b5c5dedc9519ddce6f8d2c6cd43d1be17cecb65cb'
+            '721d6614528e2c38f83e51f4f819876912b14a71fe996856525f570937f0ffce'
             'f34c2b0aa2ed4ab9c7e7bcab5197470c30fedc6c2148f337839dd24bceae35fd')
 
 _backports=(
@@ -125,7 +125,7 @@ prepare() {
 	## Based on http://lists.gnu.org/archive/html/grub-devel/2012-02/msg00021.html
 	patch -Np1 -i "${srcdir}/0001-00_header-add-GRUB_COLOR_-variables.patch"
 
-	echo "Patch to detect of Arch Linux initramfs images by grub-mkconfig..."
+	echo "Patch to detect of Monadi initramfs images by grub-mkconfig..."
 	patch -Np1 -i "${srcdir}/0002-10_linux-detect-archlinux-initramfs.patch"
 
 	echo "Patch to support dropins for default configuration..."
